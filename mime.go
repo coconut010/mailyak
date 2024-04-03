@@ -144,7 +144,7 @@ func (m *MailYak) fromHeader() string {
 		return fmt.Sprintf("From: %s\r\n", m.fromAddr)
 	}
 
-	return fmt.Sprintf("From: %s <%s>\r\n", m.fromName, m.fromAddr)
+	return fmt.Sprintf("From: %s\r\n", m.fromName)
 }
 
 func (m *MailYak) writeAlternativePart(mixed *multipart.Writer, boundary string) error {
